@@ -1,0 +1,3 @@
+Goal: Analyze student academic performance and behavioral factors to
+identify patterns, performance drivers, and risk profiles using Python,
+SQL, and Power BI.
