@@ -1,57 +1,51 @@
-# Ed-Tech Learning Analytics & Student Performance Dashboard
+# Electronics Product Reviews Analysis
+### Leveraging Sentiment Analysis for Brand Benchmarking & Strategic Insights
 
-## Overview
-This project analyzes student academic performance and engagement data to identify
-key factors influencing GPA and to detect students at academic risk. The solution
-combines SQL-based data preparation, Python analytics and machine learning, and
-interactive Power BI dashboards.
+This project evaluates ~6,900 customer reviews from 2015–2018 to decode the relationship between star ratings and customer sentiment. While the electronics market shows high overall satisfaction, this study identifies "early warning" signals in sentiment that raw ratings often miss, providing a nuanced view of brand performance—specifically for **Microsoft**—against 37 competitors.
 
-## Objectives
-- Analyze student academic performance using GPA and grade distribution
-- Understand the impact of behavioral factors such as study time and attendance
-- Identify at-risk students using data-driven metrics
-- Build an interactive dashboard for academic decision-making
+## 📊 Key Project Metrics
+* [cite_start]**Dataset**: ~6,905 Validated Customer Reviews [cite: 21]
+* [cite_start]**Scope**: 38 Global Electronics Brands [cite: 22]
+* [cite_start]**Timeline**: 2015 – 2018 Analysis Period [cite: 3]
+* **KPIs**: 4.368 Avg Rating | 75.59% Recommendation Rate | 86.31% Positive Sentiment
 
-## Dataset
-The dataset contains student-level demographic, behavioral, and academic information,
-including study time, absences, parental support, tutoring, and GPA. Encoded categorical
-variables were validated and corrected during data preprocessing.
+## 🎯 Business Objectives
+The analysis was designed to answer critical business questions:
+* [cite_start]Which products lead in customer advocacy versus simple review volume? [cite: 14]
+* [cite_start]How does Microsoft's brand perception compare to market leaders? [cite: 15]
+* [cite_start]Can sentiment analysis predict future rating declines? [cite: 18]
+* [cite_start]What is the correlation between review length and perceived "helpfulness"? [cite: 16]
 
-## Tools & Technologies
-- SQL
-- Python (Pandas, NumPy, Scikit-learn, Matplotlib)
-- Power BI
-- Power Query
+## 🛠️ Methodology & Tech Stack
+* [cite_start]**Data Prep**: Cleaning and feature engineering (review length/time attributes)[cite: 33, 36].
+* [cite_start]**SQL (MySQL)**: Complex querying for brand-level performance and time-series trends[cite: 40].
+* [cite_start]**Tableau**: Development of four interactive dashboards for business storytelling[cite: 44].
+* [cite_start]**Sentiment Analysis**: Integration of qualitative labels with quantitative scores[cite: 6].
 
-## Methodology
-1. Data extraction and preprocessing using SQL
-2. Data cleaning and feature engineering in Python
-3. Exploratory Data Analysis (EDA)
-4. Machine Learning using Random Forest Regression
-5. Interactive dashboard development in Power BI
+## 🔍 Visual Insights
 
-## Machine Learning Results
-- Model: Random Forest Regressor
-- R² Score: 0.93
-- Mean Absolute Error (MAE): 0.19
+### 1. Executive Market Overview
+[cite_start]The electronics market demonstrates strong advocacy, with over 90% recommendation rates despite varying review volumes[cite: 49].
+![Executive Overview](tableau/1.Electronics%20Product%20Reviews%20-%20Executive%20Overview.png)
 
-## Key Insights
-- Attendance is the strongest predictor of academic performance
-- Study habits significantly impact GPA
-- Parental support and tutoring improve student outcomes
-- Behavioral factors outweigh demographic attributes
+### 2. Product Performance & Engagement
+Insight: Product success is multi-dimensional. [cite_start]High ratings do not always equal high engagement; niche products often have higher "quality scores" but lower visibility[cite: 55, 60].
+![Product Performance](tableau/2.Product%20performance.png)
 
-## Dashboard
-The Power BI dashboard includes:
-- Performance overview KPIs
-- Engagement and behavior analysis
-- Risk-level identification and at-risk student listing
+### 3. Brand Benchmarking (Microsoft Focus)
+[cite_start]While Microsoft maintains competitive ratings, its long-term differentiation depends on maintaining "Sentiment Consistency" compared to more volatile competitors[cite: 62, 67].
+![Brand Comparison](tableau/3.Brand%20Comparison.png)
 
-Screenshots are available in the `screenshots/` folder.
+### 4. Sentiment as an Early Warning System
+[cite_start]Data confirms that shifts in negative/neutral sentiment typically precede star-rating drops, providing a window for proactive product improvements[cite: 70, 74].
+![Sentiment & Time Trends](tableau/4.Sentiment%20and%20Time%20analysis.png)
 
-## Business Value
-The analysis supports early identification of at-risk students and enables
-data-driven academic interventions.
+## 💡 Strategic Recommendations
+* [cite_start]**Monitor Sentiment, Not Just Stars**: Ratings are lagging indicators; sentiment provides the "why" behind the score[cite: 79].
+* [cite_start]**Focus on Advocacy**: Recommendation behavior is a stronger predictor of repeat purchase than a 5-star rating[cite: 78].
+* [cite_start]**Quality Over Volume**: High-impact, "helpful" reviews drive more consumer trust than sheer volume[cite: 81].
 
-## Author
-Arjun
+---
+**Tools**: Excel • R • SQL (MySQL) • Tableau  
+**Interactive File**: [View Tableau Workbook](tableau/Electric_retail.twbx)  
+**Analysis by**: Arjun MM
