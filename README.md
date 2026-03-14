@@ -1,51 +1,46 @@
-# Electronics Product Reviews Analysis
-### Leveraging Sentiment Analysis for Brand Benchmarking & Strategic Insights
+# EdTech Learning Analytics Dashboard
+### Predictive Modeling & Student Performance Analysis
 
-This project evaluates ~6,900 customer reviews from 2015–2018 to decode the relationship between star ratings and customer sentiment. While the electronics market shows high overall satisfaction, this study identifies "early warning" signals in sentiment that raw ratings often miss, providing a nuanced view of brand performance—specifically for **Microsoft**—against 37 competitors.
+This project transforms student performance data into actionable educational intelligence. By implementing a high-precision **Random Forest Regressor ($R^2 \approx 0.9255$)**, the analysis identifies critical drivers of academic success—specifically student attendance and parental support—and visualizes these trends through an interactive 3-page Power BI dashboard.
 
 ## 📊 Key Project Metrics
-* [cite_start]**Dataset**: ~6,905 Validated Customer Reviews [cite: 21]
-* [cite_start]**Scope**: 38 Global Electronics Brands [cite: 22]
-* [cite_start]**Timeline**: 2015 – 2018 Analysis Period [cite: 3]
-* **KPIs**: 4.368 Avg Rating | 75.59% Recommendation Rate | 86.31% Positive Sentiment
+* **Model Accuracy**: $R^2$ Score of **0.9255** with a Mean Absolute Error (MAE) of **0.1856**.
+* **Cohort Overview**: Analysis of 2,392 students with an average GPA of **1.95**.
+* **Attendance Impact**: Average absences for the cohort stand at **13.88**, significantly impacting grades.
 
-## 🎯 Business Objectives
-The analysis was designed to answer critical business questions:
-* [cite_start]Which products lead in customer advocacy versus simple review volume? [cite: 14]
-* [cite_start]How does Microsoft's brand perception compare to market leaders? [cite: 15]
-* [cite_start]Can sentiment analysis predict future rating declines? [cite: 18]
-* [cite_start]What is the correlation between review length and perceived "helpfulness"? [cite: 16]
+## 🎯 Project Objectives
+* **Predict Learning Outcomes**: Estimate student GPAs based on behavioral and demographic features.
+* **Identify Performance Drivers**: Determine which factors (e.g., absences, parental support, study time) most impact success.
+* **Early Risk Detection**: Classify students into risk levels (Low, Medium, High) to facilitate proactive intervention.
 
 ## 🛠️ Methodology & Tech Stack
-* [cite_start]**Data Prep**: Cleaning and feature engineering (review length/time attributes)[cite: 33, 36].
-* [cite_start]**SQL (MySQL)**: Complex querying for brand-level performance and time-series trends[cite: 40].
-* [cite_start]**Tableau**: Development of four interactive dashboards for business storytelling[cite: 44].
-* [cite_start]**Sentiment Analysis**: Integration of qualitative labels with quantitative scores[cite: 6].
+* **Machine Learning**: Developed a **Random Forest Regressor** using Python's `scikit-learn`.
+* **Feature Engineering**: Ranked variables by importance, identifying **Absences** (0.868) as the primary predictor.
+* **Data Visualization**: Designed a **Power BI** dashboard tracking GPA distribution, attendance risk, and engagement impact.
 
 ## 🔍 Visual Insights
 
-### 1. Executive Market Overview
-[cite_start]The electronics market demonstrates strong advocacy, with over 90% recommendation rates despite varying review volumes[cite: 49].
-![Executive Overview](tableau/1.Electronics%20Product%20Reviews%20-%20Executive%20Overview.png)
+### 1. Executive Performance Overview
+Tracks high-level KPIs including average GPA (1.95) and the count of high-risk students (171 identified).
+![Performance Overview](screenshots/page1_performance.png)
 
-### 2. Product Performance & Engagement
-Insight: Product success is multi-dimensional. [cite_start]High ratings do not always equal high engagement; niche products often have higher "quality scores" but lower visibility[cite: 55, 60].
-![Product Performance](tableau/2.Product%20performance.png)
+### 2. Student Engagement & Support Analysis
+Explores the relationship between weekly study time and GPA, alongside the positive impact of tutoring and parental support on student outcomes.
+![Engagement Analysis](screenshots/page2_engagement.png)
 
-### 3. Brand Benchmarking (Microsoft Focus)
-[cite_start]While Microsoft maintains competitive ratings, its long-term differentiation depends on maintaining "Sentiment Consistency" compared to more volatile competitors[cite: 62, 67].
-![Brand Comparison](tableau/3.Brand%20Comparison.png)
+### 3. Predictive Risk & Attendance Distribution
+Visualizes the distribution of 171 high-risk students who maintain a critical average GPA of only **0.88**.
+![Risk Analysis](screenshots/page3_Risk%20analysis.png)
 
-### 4. Sentiment as an Early Warning System
-[cite_start]Data confirms that shifts in negative/neutral sentiment typically precede star-rating drops, providing a window for proactive product improvements[cite: 70, 74].
-![Sentiment & Time Trends](tableau/4.Sentiment%20and%20Time%20analysis.png)
+### 4. Model Evaluation & Feature Importance
+The Random Forest model highlights that **Absences** (86.8%) and **Parental Support** are the most significant variables in predicting student success.
+![ML Report](screenshots/ML_report.png)
 
 ## 💡 Strategic Recommendations
-* [cite_start]**Monitor Sentiment, Not Just Stars**: Ratings are lagging indicators; sentiment provides the "why" behind the score[cite: 79].
-* [cite_start]**Focus on Advocacy**: Recommendation behavior is a stronger predictor of repeat purchase than a 5-star rating[cite: 78].
-* [cite_start]**Quality Over Volume**: High-impact, "helpful" reviews drive more consumer trust than sheer volume[cite: 81].
+* **Attendance Priority**: Since **absences** have a feature importance of 0.868, school interventions must focus primarily on reducing absenteeism.
+* **Targeted Support**: Educators should prioritize the 171 "High Risk" students identified by the model for immediate academic counseling.
+* **Parental Engagement**: Increasing parental support shows a direct linear improvement in Average GPA, making it a key area for community focus.
 
 ---
-**Tools**: Excel • R • SQL (MySQL) • Tableau  
-**Interactive File**: [View Tableau Workbook](tableau/Electric_retail.twbx)  
+**Tools**: Python • SQL • Power BI • Scikit-Learn  
 **Analysis by**: Arjun MM
